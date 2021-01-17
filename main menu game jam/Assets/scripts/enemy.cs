@@ -56,7 +56,7 @@ public class enemy : MonoBehaviour
         if (collision.CompareTag("bullet")){
             zombieObject.SetActive(false);
             Destroy(collision.gameObject);
-            playerData.hasKilled = true;
+            playerObject.GetComponent<playermovement>().hasKilled = true;
         }
 
         // check if collision is with player and the player doesn't have i-frames
